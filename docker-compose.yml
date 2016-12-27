@@ -1,0 +1,17 @@
+ubuntu:
+    build: ./phalcon/
+    ports:
+        - "8181:87"
+        - "9005:9005"
+    volumes:
+        - ./marabrazMS:/var/www/html/
+        - ./config/phalcon.conf:/etc/nginx/conf.d/phalcon.conf
+    links:
+        - mongo
+    tty: true
+    command: nginx -c /etc/nginx/nginx.conf -g "daemon off;" 
+mongo:
+     image: mongo:latest
+     ports:
+        - "27017:27017"
+    
