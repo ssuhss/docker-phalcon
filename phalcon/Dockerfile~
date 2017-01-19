@@ -1,7 +1,0 @@
-FROM ssuhss/phalcon:latest
-MAINTAINER Michel Silva <michel.silva@marabraz.com>
-
-RUN service php5-fpm start
-
-#CMD ["nginx", "-g", "daemon off;"]
-EXPOSE 87

@@ -4,7 +4,7 @@ ubuntu:
         - "8181:87"
         - "9005:9005"
     volumes:
-        - ./marabrazMS:/var/www/html/
+        - ./phalcon_project/:/var/www/html/
         - ./config/phalcon.conf:/etc/nginx/conf.d/phalcon.conf
     links:
         - mongo
